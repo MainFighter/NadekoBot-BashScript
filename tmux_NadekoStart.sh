@@ -17,14 +17,16 @@ if [ $choice -eq 1 ] ; then
         echo ""
         echo "Starting NadekoBot..."
         echo "Attaching to tmux session..."
-		curl -L https://raw.githubusercontent.com/MainFighter/NadekoBot-BashScript/1.4/tmux_NadekoAutoRestart.sh | sh
+		curl https://raw.githubusercontent.com/MainFighter/NadekoBot-BashScript/1.4/tmux_NadekoAutoRestart.sh -o tmux_NadekoAutoRestart.sh
+		bash tmux_NadekoAutoRestart.sh
         tmux attach
 else
         if [ $choice -eq 2 ] ; then
                 echo ""
                 echo "Starting NadekoBot..."
                 echo "Not attaching to tmux session..."
-                curl -L https://raw.githubusercontent.com/MainFighter/NadekoBot-BashScript/1.4/tmux_NadekoAutoRestartAndUpdate.sh | sh
+                curl https://raw.githubusercontent.com/MainFighter/NadekoBot-BashScript/1.4/tmux_NadekoAutoRestartAndUpdate.sh -o tmux_NadekoAutoRestartAndUpdate.sh
+				bash tmux_NadekoAutoRestartAndUpdate.sh
                 echo ""
                 exit 0
         else
