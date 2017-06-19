@@ -10,12 +10,12 @@ while [ $choice -eq 4 ] ; do
 read choice
 if [ $choice -eq 1 ] ; then
 	echo ""
-	tmux new-session -d -s nadeko 'curl -L https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARU_Latest.sh | sh'
+	tmux new-session -d -s nadeko 'curl -L https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARN.sh | sh'
 	tmux attach
 else
 	if [ $choice -eq 2 ] ; then
 		echo ""
-		tmux new-session -d -s nadeko 'curl -L https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARU_Latest.sh | sh'
+		tmux new-session -d -s nadeko 'curl -L https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARN.sh | sh'
 	else
 		if [ $choice -eq 3 ] ; then	
 			echo ""
