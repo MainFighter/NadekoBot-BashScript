@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Valid Parms
 # autorestart - Auto Restart only
 # autorestartupdate - Auto Restart and Update
