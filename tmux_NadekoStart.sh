@@ -15,25 +15,24 @@ while [ $choice -eq 4 ] ; do
 read choice
 if [ $choice -eq 1 ] ; then
         echo ""
-        echo "Starting NadekoBot..."
-        echo "Attaching to tmux session..."
+        echo "Starting Nadeko with Auto Restart..."
+		sleep 1
 		curl https://raw.githubusercontent.com/MainFighter/NadekoBot-BashScript/1.4/tmux_NadekoAutoRestart.sh -o tmux_NadekoAutoRestart.sh
 		bash tmux_NadekoAutoRestart.sh
-        tmux attach
 else
         if [ $choice -eq 2 ] ; then
                 echo ""
-                echo "Starting NadekoBot..."
-                echo "Not attaching to tmux session..."
+                echo "Starting Nadeko with Auto Restart and Update..."
+				sleep 1
                 curl https://raw.githubusercontent.com/MainFighter/NadekoBot-BashScript/1.4/tmux_NadekoAutoRestartAndUpdate.sh -o tmux_NadekoAutoRestartAndUpdate.sh
 				bash tmux_NadekoAutoRestartAndUpdate.sh
                 echo ""
-                exit 0
         else
                 if [ $choice -eq 3 ] ; then
                         echo ""
                         echo "Exiting..."
                         echo ""
+						sleep 1
                         exit 0
                 fi
         fi

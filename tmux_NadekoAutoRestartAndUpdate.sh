@@ -11,7 +11,7 @@ read choice
 if [ $choice -eq 1 ] ; then
 	echo ""
 	tmux new-session -d -s nadeko 'curl -L https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARU_Latest.sh | sh'
-	tmux attach
+	tmux a -t nadeko
 else
 	if [ $choice -eq 2 ] ; then
 		echo ""
