@@ -1,27 +1,29 @@
-#!/bin/sh
-
 # Valid Parms
-# autorestart - Auto Restart Bot
-# autorestartupdate - Auto Restart Bot and Auto Update
-parms="${2}"
+# autorestart - Auto Restart only
+# autorestartupdate - Auto Restart and Update
+parms="$2"
 
-start)
-	if [ $parms -eq autorestart ] ; then
+start() {
+	if [ $parms = "autorestart" ] ; then
 		tmux new-session -d -s nadeko 'curl -L https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARN.sh | sh'
 	else
-		if [ $parms -eq autorestartupdate ] ; then
+		if [ $parms = "autorestartupdate" ] ; then
 			tmux new-session -d -s nadeko 'curl -L https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARU_Latest.sh | sh'
+		else
+			echo ""
+			echo "Failed to start..."
+			echo "You must use one of the parms below..."
+			echo "autorestart - Auto Restart only"
+			echo "autorestartupdate - Auto Restart and Update"
+			echo ""
 		fi
 	fi
-;;
-stop)
-	# coming soon
-;;
-restart)
-	# coming soon
-;;
-status)
-	# coming soon
-;;
+}
 
-exit 0
+stop() {
+	tmux kill-session -t nadeko
+}
+
+case $1 in
+	start|stop) "$1" ;;
+esac
