@@ -7,10 +7,10 @@ parms="$2"
 
 start() {
 	if [ $parms = "autorestart" ] ; then
-		tmux new-session -d -s nadeko 'curl -L https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARN.sh | sh'
+		curl -L https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARN.sh | sh
 	else
 		if [ $parms = "autorestartupdate" ] ; then
-			tmux new-session -d -s nadeko 'curl -L https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARU_Latest.sh | sh'
+			curl -L https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARU_Latest.sh | sh
 		else
 			echo ""
 			echo "Failed to start..."
@@ -30,10 +30,10 @@ reload () {
 	tmux kill-session -t nadeko
 	
 	if [ $parms = "autorestart" ] ; then
-		tmux new-session -d -s nadeko 'curl -L https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARN.sh | sh'
+		curl -L https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARN.sh | sh
 	else
 		if [ $parms = "autorestartupdate" ] ; then
-			tmux new-session -d -s nadeko 'curl -L https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARU_Latest.sh | sh'
+			curl -L https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARU_Latest.sh | sh
 		else
 			echo ""
 			echo "Failed to start..."
