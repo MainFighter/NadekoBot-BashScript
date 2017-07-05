@@ -1,5 +1,6 @@
 
 #!/bin/sh
+clear
 echo ""
 echo "NadekoBot tmux start script"
 echo "Made by Main Fighter"
@@ -16,6 +17,7 @@ if [ -e ./tmux_NadekoAutoRestartAndUpdate.sh ]; then
 fi
 
 choice=4
+	echo ""
         echo "1. Auto Restart and no update."
         echo "2. Auto Restart update."
         echo "3. Exit."
