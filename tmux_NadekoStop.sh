@@ -42,7 +42,7 @@ else
 		echo "Restarting Nadekobot with Auto Restart..."
 		sleep 1
 		tmux kill-session -t nadeko
-		tmux new-session -d -s nadeko 'wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARN.sh &> /dev/null && bash NadekoARU_Latest.sh'
+		tmux new-session -d -s nadeko 'wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARN.sh &> /dev/null && bash NadekoARN.sh'
 		echo ""
 	else
 		if [ $choice -eq 3 ] ; then

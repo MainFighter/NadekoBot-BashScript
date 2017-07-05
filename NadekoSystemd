@@ -7,7 +7,7 @@ parms="$2"
 
 start() {
 	if [ $parms = "autorestart" ] ; then
-		wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARN.sh &> /dev/null && bash NadekoARU_Latest.sh
+		wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARN.sh &> /dev/null && bash NadekoARN.sh
 	else
 		if [ $parms = "autorestartupdate" ] ; then
 			wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARU_Latest.sh &> /dev/null && bash NadekoARU_Latest.sh
@@ -30,7 +30,7 @@ reload () {
 	tmux kill-session -t nadeko
 	
 	if [ $parms = "autorestart" ] ; then
-		wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARN.sh &> /dev/null && bash NadekoARU_Latest.sh
+		wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARN.sh &> /dev/null && bash NadekoARN.sh
 	else
 		if [ $parms = "autorestartupdate" ] ; then
 			wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARU_Latest.sh &> /dev/null && bash NadekoARU_Latest.sh
