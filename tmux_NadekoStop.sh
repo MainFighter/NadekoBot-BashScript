@@ -15,7 +15,7 @@ echo "Updating scripts..."
 
 if [ -e tmux_NadekoStart.sh ]; then
 	rm tmux_NadekoStart.sh
-	wget -N https://raw.githubusercontent.com/MainFighter/NadekoBot-BashScript/1.4/tmux_NadekoStart.sh &> /dev/null
+	wget -N https://github.com/MainFighter/NadekoBot-BashScript/blob/1.4/tmux_NadekoStart.sh &> /dev/null
 fi
 sleep 1
 

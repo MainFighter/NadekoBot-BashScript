@@ -2,7 +2,7 @@
 
 clear
 echo ""
-echo "NadekoBot tmux scripts"
+echo "NadekoBot tmux and misc scripts"
 echo "Made by Main Fighter"
 echo "mainfighter.com"
 echo ""
@@ -27,6 +27,9 @@ else
 	else
 		if [ $choice -eq 3 ] ; then	
 			echo ""
+			echo "Exiting..."
+			echo ""
+			sleep 1
 			exit 0
 		fi
 	fi
