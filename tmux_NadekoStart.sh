@@ -5,7 +5,15 @@ echo "NadekoBot tmux start script"
 echo "Made by Main Fighter"
 echo ""
 
-rm tmux_NadekoAutoRestart.sh tmux_NadekoAutoRestartAndUpdate.sh
+if [ ! -f ./tmux_NadekoAutoRestart.sh ]; then
+    echo "Removing old tmux_NadekoAutoRestart.sh file."
+    rm tmux_NadekoAutoRestart.sh
+fi
+
+if [ ! -f ./tmux_NadekoAutoRestartAndUpdate.sh ]; then
+    echo "Removing old tmux_NadekoAutoRestartAndUpdate.sh file."
+    rm tmux_NadekoAutoRestartAndUpdate.sh
+fi
 
 choice=4
         echo "1. Auto Restart and no update."
