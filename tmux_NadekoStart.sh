@@ -29,14 +29,14 @@ if [ $choice -eq 1 ] ; then
 	echo ""
 	echo "Starting Nadeko with Auto Restart..."
 	sleep 1
-	wget -N https://raw.githubusercontent.com/MainFighter/NadekoBot-BashScript/1.4/tmux_NadekoAutoRestart.sh > /dev/null
+	wget -N https://raw.githubusercontent.com/MainFighter/NadekoBot-BashScript/1.4/tmux_NadekoAutoRestart.sh &> /dev/null
 	bash tmux_NadekoAutoRestart.sh
 else
 	if [ $choice -eq 2 ] ; then
 		echo ""
 		echo "Starting Nadeko with Auto Restart and Update..."
 		sleep 1
-		wget -N https://raw.githubusercontent.com/MainFighter/NadekoBot-BashScript/1.4/tmux_NadekoAutoRestartAndUpdate.sh > /dev/null
+		wget -N https://raw.githubusercontent.com/MainFighter/NadekoBot-BashScript/1.4/tmux_NadekoAutoRestartAndUpdate.sh &> /dev/null
 		bash tmux_NadekoAutoRestartAndUpdate.sh
 		echo ""
 	else

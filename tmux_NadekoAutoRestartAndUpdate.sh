@@ -18,12 +18,12 @@ read choice
 
 if [ $choice -eq 1 ] ; then
 	echo ""
-	tmux new-session -d -s nadeko 'wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARU_Latest.sh > /dev/null && bash NadekoARU_Latest.sh'
+	tmux new-session -d -s nadeko 'wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARU_Latest.sh &> /dev/null && bash NadekoARU_Latest.sh'
 	tmux a -t nadeko
 else
 	if [ $choice -eq 2 ] ; then
 		echo ""
-		tmux new-session -d -s nadeko 'wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARU_Latest.sh > /dev/null && bash NadekoARU_Latest.sh'
+		tmux new-session -d -s nadeko 'wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARU_Latest.sh &> /dev/null && bash NadekoARU_Latest.sh'
 	else
 		if [ $choice -eq 3 ] ; then	
 			echo ""
