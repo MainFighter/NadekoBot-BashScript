@@ -7,12 +7,22 @@ parms="$2"
 
 start() {
 	if [ $parms = "autorestart" ] ; then
-		cd ~/NadekoBot
-		wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARN.sh
-		bash NadekoARN.sh
+		echo ""
+		echo "Running NadekoBot with auto restart normally! (without updating)"
+		sleep 5s
+		cd NadekoBot
+		dotnet restore && dotnet build --configuration Release
+		cd -
+		cd NadekoBot/src/NadekoBot
+		while :; do dotnet run -c Release; sleep 5s; done
+		echo ""
+		echo "That didn't work? Please report in #NadekoLog Discord Server."
+		sleep 3s
+		bash linuxAIO.sh
+		echo "Done"
+		exit 0
 	else
 		if [ $parms = "autorestartupdate" ] ; then
-		cd ~/NadekoBot
 			wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARU_Latest.sh
 			bash NadekoARU_Latest.sh
 		else
