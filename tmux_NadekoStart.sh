@@ -7,12 +7,10 @@ echo "Made by Main Fighter"
 echo ""
 
 if [ -e ./tmux_NadekoAutoRestart.sh ]; then
-    echo "Removing old tmux_NadekoAutoRestart.sh file."
     rm tmux_NadekoAutoRestart.sh
 fi
 
 if [ -e ./tmux_NadekoAutoRestartAndUpdate.sh ]; then
-    echo "Removing old tmux_NadekoAutoRestartAndUpdate.sh file."
     rm tmux_NadekoAutoRestartAndUpdate.sh
 fi
 
