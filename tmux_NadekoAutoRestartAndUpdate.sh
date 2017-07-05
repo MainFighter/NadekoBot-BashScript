@@ -8,6 +8,7 @@ echo "mainfighter.com"
 echo ""
 
 choice=4
+	echo ""
 	echo "1. Attach tmux session."
 	echo "2. Don't attach tmux session."
 	echo "3. Exit."

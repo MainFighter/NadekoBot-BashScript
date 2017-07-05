@@ -1,41 +1,13 @@
 #!/bin/sh
 
-#THIS ISN'T COMPLETE OR TESTED
-#THIS ISN'T COMPLETE OR TESTED
-#THIS ISN'T COMPLETE OR TESTED
-#THIS ISN'T COMPLETE OR TESTED
-#THIS ISN'T COMPLETE OR TESTED
-#THIS ISN'T COMPLETE OR TESTED
-#THIS ISN'T COMPLETE OR TESTED
-#THIS ISN'T COMPLETE OR TESTED
-#THIS ISN'T COMPLETE OR TESTED
-#THIS ISN'T COMPLETE OR TESTED
-#THIS ISN'T COMPLETE OR TESTED
-#THIS ISN'T COMPLETE OR TESTED
-#THIS ISN'T COMPLETE OR TESTED
-
 clear
-echo "Removing scripts that aren't needed..."
-
-if [ -e tmux_NadekoAutoRestart.sh ]; then
-	rm tmux_NadekoAutoRestart.sh
-fi
-
-if [ -e tmux_NadekoAutoRestartAndUpdate.sh ]; then
-	rm tmux_NadekoAutoRestartAndUpdate.sh
-fi
-sleep 1
-
-echo "Updating scripts..."
-
-if [ -e tmux_NadekoStart.sh ]; then
-	rm tmux_NadekoStart.sh
-	wget -N https://github.com/MainFighter/NadekoBot-BashScript/blob/1.4/tmux_NadekoStart.sh &> /dev/null
-fi
-sleep 1
+echo ""
+echo "NadekoBot tmux and misc scripts"
+echo "Made by Main Fighter"
+echo "mainfighter.com"
+echo ""
 
 choice=5
-	clear
 	echo ""
 	echo "1. Stop."
 	echo "2. Restart with Auto Restart."

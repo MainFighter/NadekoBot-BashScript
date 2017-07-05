@@ -7,14 +7,6 @@ echo "Made by Main Fighter"
 echo "mainfighter.com"
 echo ""
 
-if [ -e ./tmux_NadekoAutoRestart.sh ]; then
-	rm tmux_NadekoAutoRestart.sh
-fi
-
-if [ -e ./tmux_NadekoAutoRestartAndUpdate.sh ]; then
-	rm tmux_NadekoAutoRestartAndUpdate.sh
-fi
-
 choice=4
 	echo ""
 	echo "1. Auto Restart and no update."
