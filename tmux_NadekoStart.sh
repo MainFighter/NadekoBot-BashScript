@@ -5,6 +5,8 @@ echo "NadekoBot tmux start script"
 echo "Made by Main Fighter"
 echo ""
 
+rm tmux_NadekoAutoRestart.sh tmux_NadekoAutoRestartAndUpdate.sh
+
 choice=4
         echo "1. Auto Restart and no update."
         echo "2. Auto Restart update."
