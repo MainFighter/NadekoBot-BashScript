@@ -15,7 +15,7 @@ echo "Updating scripts..."
 
 if [ -e tmux_NadekoStart.sh ]; then
 	rm tmux_NadekoStart.sh
-	wget -N https://raw.githubusercontent.com/MainFighter/NadekoBot-BashScript/1.4/tmux_NadekoStart.sh
+	wget -N https://raw.githubusercontent.com/MainFighter/NadekoBot-BashScript/1.4/tmux_NadekoStart.sh > /dev/null
 fi
 sleep 1
 
@@ -42,7 +42,7 @@ else
 		echo "Restarting Nadekobot with Auto Restart..."
 		sleep 1
 		tmux kill-session -t nadeko
-		tmux new-session -d -s nadeko 'wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARN.sh && bash NadekoARU_Latest.sh'
+		tmux new-session -d -s nadeko 'wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARN.sh > /dev/null && bash NadekoARU_Latest.sh'
 		echo ""
 	else
 		if [ $choice -eq 3 ] ; then
@@ -50,7 +50,7 @@ else
 			echo "Restarting Nadekobot with Auto Restart and Update..."
 			sleep 1
 			tmux kill-session -t nadeko
-			tmux new-session -d -s nadeko 'wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARU_Latest.sh && bash NadekoARU_Latest.sh'
+			tmux new-session -d -s nadeko 'wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/1.4/NadekoARU_Latest.sh > /dev/null && bash NadekoARU_Latest.sh'
 			echo ""
 		else
 			if [ $choice -eq 4 ] ; then
