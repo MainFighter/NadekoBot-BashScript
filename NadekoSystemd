@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# Valid Parms
+# autorestart - Auto Restart only
+# autorestartupdate - Auto Restart and Update
+parms="$2"
+usrdir="/home/discord/"
+basedir="/home/discord/Nadeko/"
+
+start() {
+
+#Need to rewrite
+
+}
+
+stop() {
+
+#Need to rewrite
+
+}
+
+reload () {
+
+#Need to rewrite
+
+}
+
+case $1 in
+	start|stop|reload) "$1" ;;
+esac
