@@ -86,6 +86,12 @@ if [ $choice -eq 1 ] ; then
 		rm tmux_NadekoStop.sh
 		wget -N https://github.com/MainFighter/NadekoBot-BashScript/raw/1.9/tmux_NadekoStop.sh &> /dev/null
 	fi
+
+	if [ -e pm2_NadekoStart.sh ]; then
+		echo "Updating pm2_NadekoStart.sh..."
+		rm pm2_NadekoStart.sh
+		wget -N https://github.com/MainFighter/NadekoBot-BashScript/raw/1.9/pm2_NadekoStart.sh &> /dev/null
+	fi
 else
 	if [ $choice -eq 2 ] ; then
 		echo ""
