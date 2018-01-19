@@ -35,18 +35,21 @@ if [ $choice -eq 1 ] ; then
 	fi
 
 	if [ -e nadeko_run.sh ]; then
-		echo "Removing nadeko_run.sh..."
+		echo "Updating nadeko_run.sh..."
 		rm nadeko_run.sh
+		wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/1.9/nadeko_run.sh &> /dev/null
 	fi
 
 	if [ -e NadekoARN.sh ]; then
-		echo "Removing NadekoARN.sh..."
+		echo "Updating NadekoARN.sh..."
 		rm NadekoARN.sh
+		wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/1.9/NadekoARN.sh &> /dev/null
 	fi
 
 	if [ -e NadekoARU_Latest.sh ]; then
-		echo "Removing NadekoARU_Latest..."
+		echo "Updating NadekoARU_Latest..."
 		rm NadekoARU_Latest.sh
+		wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/1.9/NadekoARU_Latest.sh &> /dev/null
 	fi
 
 	if [ -e nadekoautoinstaller.sh ]; then
